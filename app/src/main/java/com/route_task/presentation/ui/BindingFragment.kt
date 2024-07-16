@@ -6,8 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
-import com.route_task.presentation.util.LocalUtil
-import com.route_task.presentation.util.hideSoftKeyboard
+import com.route_task.util.LocalUtil
+import com.route_task.util.hideSoftKeyboard
 
 
 abstract class BindingFragment<out T : ViewBinding> : Fragment() {

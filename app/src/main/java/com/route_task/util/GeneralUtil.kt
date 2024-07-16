@@ -1,4 +1,4 @@
-package com.route_task.presentation.util
+package com.route_task.util
 
 import android.app.Activity
 import android.content.Intent
@@ -130,7 +130,7 @@ fun <T> toResultFlow(call: suspend () -> Response<T>): Flow<ApiState<T>> = flow 
         emit(ApiState.Error(UiText.StringResource(R.string.check_your_internet_connection)))
 
     } catch (e: Exception) {
-            Log.e("networkResponse", "Exception\n ${e.message.toString()}")
+        Log.e("networkResponse", "Exception\n ${e.message.toString()}")
         emit(ApiState.Error(UiText.StringResource(R.string.something_went_wrong)))
     }
 }

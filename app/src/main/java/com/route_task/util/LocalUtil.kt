@@ -1,4 +1,4 @@
-package com.route_task.presentation.util
+package com.route_task.util
 
 import android.app.Activity
 import android.content.Context

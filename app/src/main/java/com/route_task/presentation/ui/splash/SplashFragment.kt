@@ -11,7 +11,7 @@ import androidx.viewbinding.ViewBinding
 import com.route_task.R
 import com.route_task.databinding.FragmentSplashBinding
 import com.route_task.presentation.ui.BindingFragment
-import com.route_task.presentation.util.navOptionsFromTopAnimation
+import com.route_task.util.navOptionsFromTopAnimation
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
