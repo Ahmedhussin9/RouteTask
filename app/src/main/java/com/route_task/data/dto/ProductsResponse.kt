@@ -38,7 +38,8 @@ data class Product(
     val weight: Int
 ) : Parcelable{
     fun getDiscountPrice(): Double {
-        return price?.minus((price * discountPercentage!! / 100)) ?: 0.0
+        val formattedPrice = String.format("%.2f", price?.minus((price * discountPercentage!! / 100)) ?: 0.0)
+        return formattedPrice.toDouble()
     }
     fun toProductModel(): ProductsModel{
         return ProductsModel(

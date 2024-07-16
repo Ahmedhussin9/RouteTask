@@ -1,5 +1,6 @@
 package com.route_task.presentation.ui.home
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -19,9 +20,10 @@ class ProductsAdapter @Inject constructor():
             binding.apply {
                 tvTitle.text = item.brand
                 tvSubtitle.text = item.description
-                tvRealPrice.text = item.realPrice.toString()
-                tvFake.text = item.fake.toString()
-                tvReview.text = item.rating.toString()
+                tvRealPrice.text = "${item.realPrice.toString()} EGP"
+                tvFake.text = item.fake.toString() + "EGP"
+                tvFake.paintFlags = tvFake.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                tvReview.text = "Review (${item.rating})"
                 Glide.with(itemView).load(item.images[0]).into(ivProductImage)
             }
         }
